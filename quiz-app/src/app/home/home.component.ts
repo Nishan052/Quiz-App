@@ -12,7 +12,9 @@ data: any;
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-    
+    //get data on page load 
+    //its better to make api calls in service or environment files but 
+    //since i have only one api call here i made that call directly in this file
     this.getData().subscribe(response =>{
       this.data = [...response.data]
       console.log(this.data);
