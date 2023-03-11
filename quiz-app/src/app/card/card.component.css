@@ -1,0 +1,74 @@
+
+@import 'ngx-toastr/toastr';
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.buttons{
+    backdrop-filter: blur(25px);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+    justify-content: space-around;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+button {
+    background-color: var(--primar-color); /* Green */
+    border: none;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button:hover{
+    background-color: rgb(173, 166, 195);
+  }
+
+  .cards{
+    backdrop-filter: blur(25px);
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    min-height: 50vh;
+    min-width: 80vh;
+    justify-content: space-around;
+    border: 1px solid grey;
+    border-radius: 10px;
+  }
+
+  input[type=text] {
+    color: black;
+    margin: 5px 0px;
+    padding: 2px;
+    font-size: 13px;
+    height: 30px;
+    border: grey 1px solid;
+    border-radius: 5px;
+    width: 50vh;
+  }
+
+  .active{
+    border: 1px solid green;
+    color: green;
+  }
+
+  .message{
+    border : 1px solid;
+  }

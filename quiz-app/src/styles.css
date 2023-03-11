@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: var(--secondary-color);
+  }
+
+  *{
+    color: var(--primar-color);
+    padding: 0;
+    margin: 0;
+    font-size: large;
+}
+
+:root{
+    --primar-color:rgb(224, 222, 222);
+    --secondary-color: rgb(28, 4, 50);
+}

@@ -1,0 +1,25 @@
+<div class="container">
+    <div *ngIf="!flag" class="buttons"> 
+      <h1>PLAY & WIN</h1>
+        <span >Let's check your knwoledge on Countries</span> <br>
+        <button  (click)="getstarted()">Start Quiz</button>
+    </div>
+  
+  <div *ngIf="flag" class="cards">
+    What is the Captial of {{ random.name }} ?
+    
+    <form #cityform="ngForm" (ngSubmit)="submit(cityform.value)">
+      <input type="text" ngModel name="city" placeholder="Enter City" /> <br />
+      <button>Submit</button>
+    </form>
+    <div *ngIf="messageFlag" class="message" [ngStyle]="{'border': color}">
+      <span *ngIf="successFlag"> Correct Answer </span>
+      <span *ngIf="!successFlag">
+        Incorrect Answer,<br> Capital of {{ random.name }} is {{ random.capital }}
+      </span>
+    </div>
+    <div class="row" style="position:relative; left: 60vh;">
+        <button (click)="nextQuetion(); cityform.reset()">Next Quetion</button>
+    </div>
+  </div>
+</div>
