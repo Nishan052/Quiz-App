@@ -4,7 +4,6 @@ body {
   }
 
   *{
-    color: var(--primar-color);
     padding: 0;
     margin: 0;
     font-size: large;

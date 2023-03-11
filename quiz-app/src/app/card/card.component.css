@@ -2,6 +2,8 @@
 @import 'ngx-toastr/toastr';
 
 .container{
+  
+  color: var(--primar-color);
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -46,7 +48,7 @@ button {
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    min-height: 50vh;
+    min-height: 40vh;
     min-width: 80vh;
     justify-content: space-around;
     border: 1px solid grey;
@@ -69,6 +71,20 @@ button {
     color: green;
   }
 
-  .message{
-    border : 1px solid;
+  .sucess{
+    background-color: rgb(97, 211, 97);
+    padding: 10px;
+    min-width: 50vh;
+    border : 1px solid green;
+    color: white;     
+    border-radius: 5px;
+  }
+
+  .failed{
+    background-color: rgb(210, 28, 28);
+    padding: 10px;
+    min-width: 50vh;
+    border: 1px solid red;
+    color: white !important;
+    border-radius: 5px;
   }

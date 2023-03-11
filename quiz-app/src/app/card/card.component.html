@@ -1,9 +1,12 @@
 <div class="container">
+  <!-- Home screen -->
     <div *ngIf="!flag" class="buttons"> 
       <h1>PLAY & WIN</h1>
-        <span >Let's check your knwoledge on Countries</span> <br>
+        <span >Let's check your knowledge on Capital of Countries</span> <br>
         <button  (click)="getstarted()">Start Quiz</button>
     </div>
+   
+    <!-- Quiz card -->
   
   <div *ngIf="flag" class="cards">
     What is the Captial of {{ random.name }} ?
@@ -12,13 +15,17 @@
       <input type="text" ngModel name="city" placeholder="Enter City" /> <br />
       <button>Submit</button>
     </form>
-    <div *ngIf="messageFlag" class="message" [ngStyle]="{'border': color}">
+    <div *ngIf="messageFlag" class="message" [ngClass]="correct">
       <span *ngIf="successFlag"> Correct Answer </span>
       <span *ngIf="!successFlag">
         Incorrect Answer,<br> Capital of {{ random.name }} is {{ random.capital }}
       </span>
     </div>
-    <div class="row" style="position:relative; left: 60vh;">
+    
+      
+    <div class="row" style="position:relative;">
+      <button style="margin-right: 43vh;" (click)="backHome(); cityform.reset()">Back Home</button>
+ 
         <button (click)="nextQuetion(); cityform.reset()">Next Quetion</button>
     </div>
   </div>
